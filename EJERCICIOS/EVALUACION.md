@@ -65,3 +65,73 @@ fecha, número de páginas y el número de ejemplares vendidos.
 
 ![BD_art_1](https://user-images.githubusercontent.com/19659201/170092272-d4216750-89ed-4635-8b8f-e1a8946728e1.jpg)
 
+
+https://www.db-fiddle.com/f/4ySko9dvt3cHoPnHAhY1FJ/2
+
+CREATE DATABASE editorial;
+USE editorial;
+ 
+CREATE TABLE sucursales(
+  cod_sucursal INT UNSIGNED PRIMARY KEY,
+  domicilio VARCHAR(100) NOT NULL,
+  telefono char(10) NOT NULL  
+);
+
+CREATE TABLE revistas(
+  num_registro INT UNSIGNED PRIMARY KEY,
+  título varchar(50),
+  periodicidad varchar(50),
+  tipo varchar(50)
+);
+ 
+CREATE TABLE secciones(
+  id_seccion INT UNSIGNED PRIMARY KEY,
+  título varchar(50) NOT NULL,
+  revista INT UNSIGNED,
+  extensión varchar(30),
+  FOREIGN KEY (revista) REFERENCES revistas(num_registro)  
+);
+ 
+CREATE TABLE ejemplares (
+  num_ejemplar INT UNSIGNED PRIMARY KEY,
+  fecha DATETIME,
+  copias_vendidas INT UNSIGNED NOT NULL,
+  num_paginas INT UNSIGNED NOT NULL,
+  revista INT UNSIGNED,
+  FOREIGN KEY(revista) REFERENCES revistas(num_registro)
+);
+ 
+CREATE TABLE empleados (
+  CURP CHAR(18) NOT NULL PRIMARY KEY,
+  nombre VARCHAR(50) NOT NULL,
+  domicilio VARCHAR(100) NOT NULL,
+  telefono char(10) NOT NULL,
+  sucursal INT UNSIGNED NOT NULL,
+  FOREIGN KEY(sucursal) REFERENCES sucursales(cod_sucursal)
+);
+
+
+CREATE TABLE periodistas (
+  CURP CHAR(18) NOT NULL PRIMARY KEY,
+  nombre VARCHAR(50) NOT NULL,
+  domicilio VARCHAR(100) NOT NULL,
+  telefono char(10) NOT NULL,
+  especialidad VARCHAR(20) NOT NULL
+ );
+ 
+ CREATE TABLE publicaciones (
+   cod_sucursal INT UNSIGNED NOT NULL,
+   cod_revista INT UNSIGNED NOT NULL,
+   FOREIGN KEY (cod_sucursal) REFERENCES sucursales(cod_sucursal),
+   FOREIGN KEY (cod_revista) REFERENCES revistas(num_registro)   
+ );
+
+CREATE TABLE periodistas_revistas (
+  CURP CHAR(18) NOT NULL,
+  cod_revista INT UNSIGNED NOT NULL,
+  FOREIGN KEY (CURP) REFERENCES periodistas(CURP),
+  FOREIGN KEY (cod_revista) REFERENCES revistas(num_registro) 
+);
+
+
+
