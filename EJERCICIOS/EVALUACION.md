@@ -63,7 +63,8 @@ constan de un título y una extensión.
 ● Para cada revista, almacenaremos información de cada ejemplar, que incluirá la
 fecha, número de páginas y el número de ejemplares vendidos.
 
-![BD_art_1](https://user-images.githubusercontent.com/19659201/170092272-d4216750-89ed-4635-8b8f-e1a8946728e1.jpg)
+![BD_editorial](https://user-images.githubusercontent.com/19659201/170140430-1eb5fc2e-411b-464b-9f32-bf77e2b8b63e.jpg)
+
 
 
 https://www.db-fiddle.com/f/4ySko9dvt3cHoPnHAhY1FJ/2
