@@ -9,9 +9,17 @@ Ejercicio:
 
 1. ¿Qué es un DataWarehouse?(valor 2)
 
+un data Warehouse, o almacen de datos, es un sistema que combina, almacena y ordena información de diferentes fuentes en un almacén ed datos único, con la infraestructura y disponibilidad adecuadas.
+
 2. Realiza un diseño del modelo en estrella (valor 2)
 
+![imagen](https://user-images.githubusercontent.com/19659201/171882931-3746eacf-0a0a-4d38-8601-b7a11ed1ae24.png)
+
+
 3. Realiza un diseño del modelo copo de nieve (valor 2)
+
+![imagen](https://user-images.githubusercontent.com/19659201/171883093-4440b10c-7865-4de2-9c71-cd1b0918dc60.png)
+
 
 
 ## Práctica 7
@@ -58,54 +66,4 @@ SELECT nombre_fabricante, MAX(precio), MIN(precio), AVG(precio) AS Prom, COUNT(c
 ## Práctica 8.
 ### Disparadores (Triggers)
 
-Objetivo: Demostrar las operaciones que se realizan en una base de datos.
-
-Ejercicio: Crea una base de datos llamada test que contenga una tabla llamada
-alumnos con las siguientes columnas. (valor 18)
-
-Evaluación:
-
-Creación de la base de datos : 9 puntos.
-
-Creación de los Disparadores(Triggers): 9 puntos.
-
-Tabla alumnos:
-
-● id (entero sin signo)
-
-● nombre (cadena de caracteres)
-
-● apellido1 (cadena de caracteres)
-
-● apellido2 (cadena de caracteres)
-
-● nota (número real)
-
-Una vez creada la tabla escriba dos triggers con las siguientes características:
-
-● Trigger 1: trigger_check_nota_before_insert
-
-  o Se ejecuta sobre la tabla alumnos.
-  
-  o Se ejecuta antes de una operación de inserción.
-  
-  o Si el nuevo valor de la nota que se quiere insertar es negativo, se guarda
-  como 0.
-  
-  o Si el nuevo valor de la nota que se quiere insertar es mayor que 10, se
-  guarda como 10.
-
-● Trigger2 : trigger_check_nota_before_update
-  o Se ejecuta sobre la tabla alumnos.
-  
-  o Se ejecuta antes de una operación de actualización.
-  
-  o Si el nuevo valor de la nota que se quiere actualizar es negativo, se guarda
-  como 0.
-  
-  o Si el nuevo valor de la nota que se quiere actualizar es mayor que 10, se
-  guarda como 10.
-  
-Una vez creados los triggers escribe varias sentencias de inserción y actualización
-sobre la tabla alumnos y verifica que los triggers se están ejecutando
-correctamente.
+EV 4 ------>
