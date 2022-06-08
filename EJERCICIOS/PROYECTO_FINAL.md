@@ -30,5 +30,6 @@ un código de categoría único.
 
 ● Una pieza sólo puede pertenecer a una categoría.
 
+https://www.db-fiddle.com/f/x9ckB7s4t2gBccVZLVXBDr/0
 
 ![BD_art_EvFinal](https://user-images.githubusercontent.com/19659201/171287378-ce97be1c-0527-4f18-9695-8491193acef3.jpg)
